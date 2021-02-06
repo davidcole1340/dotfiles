@@ -1,0 +1,4 @@
+alias vim="nvim"
+alias ls="ls -lah"
+alias python="python3"
+alias code="code --disable-gpu" # vbox workaround
