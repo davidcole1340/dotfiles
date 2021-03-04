@@ -15,6 +15,9 @@ Plug 'keith/swift.vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'sheerun/vim-polyglot'
+Plug 'altercation/vim-colors-solarized'
+Plug 'itchyny/lightline.vim'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
 
@@ -36,9 +39,21 @@ if (has('termguicolors'))
 	set termguicolors
 endif
 
-let g:material_style='palenight'
+" remove highlighting
+nnoremap <esc> :noh<return><esc>
+
+"let g:material_style='palenight'
+"set background=dark
+"colorscheme vim-material
+
+"syntax enable
+"set background=light
+"colorscheme solarized
+
+set t_Co=256
+
 set background=dark
-colorscheme vim-material
+colorscheme PaperColor
 
 " nerdtree
 nnoremap <C-o> :NERDTreeToggle<CR>
@@ -77,3 +92,5 @@ set shiftwidth=4
 set expandtab
 
 set ttimeoutlen=100
+set mouse=a
+set ignorecase
