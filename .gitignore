@@ -9,3 +9,4 @@
 !.config/i3
 !.config/nvim/init.vim
 !.config/i3/config
+!.alacritty.yml
