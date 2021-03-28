@@ -229,3 +229,4 @@ exec_always /home/david/.mouse.sh
 
 # screenshot
 bindsym --release Shift+Print exec import png:- | xclip -selection clipboard -t image/png
+#bindsym --release Shift+Print exec gyazo

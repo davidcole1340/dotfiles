@@ -18,6 +18,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'altercation/vim-colors-solarized'
 Plug 'itchyny/lightline.vim'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'tpope/vim-fugitive'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -73,13 +75,18 @@ nmap <F10> <Plug>(coc-implementation)
 nmap <C-\> <leader>c<Space>
 vmap <C-\> <leader>c<Space>
 
-" auto bracket
-inoremap " ""<left>
-inoremap ' ''<left>
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
+" suggestions
+nnoremap <F8> :CocAction<CR>
+
+" lightline
+let g:lightline = {
+    \ 'active': {
+        \ 'left': [['mode', 'paste'], ['gitbranch', 'readonly', 'filename', 'modified']],
+    \ },
+    \ 'component_function': {
+        \ 'gitbranch': 'FugitiveHead'
+    \ }
+\ }
 
 set number
 set relativenumber
